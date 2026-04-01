@@ -61,9 +61,9 @@ state_machine:
 
 validation_decision_tree:
   - if: "browser.critical_count > 0 || tech_lead.critical_count > 0"
-    next: REWORK_FRONTEND
+    next: REWORK
   - if: "browser.medium_count > 0 || tech_lead.medium_count > 0"
-    next: REWORK_OPTIONAL_GATE
+    next: REWORK
   - if: "timeout.any == true"
     next: SMART_ESCALATION
   - if: "true"
